@@ -1,0 +1,29 @@
+//text to parse for word "Lucia"
+var text = "There in our dark house\
+Walking with lit candles\
+Santa Lucia Santa Lucia";
+
+var myName = "Lucia";
+
+//empty array to collect all "Lucia"
+var hits = [];
+
+//array that holds all words
+var textArray = text.split(" ");
+
+//loops through entire text to search for "Lucia"
+for(i=0; i<textArray.length; i++) {
+    //compares word to "Lucia"
+    if (textArray[i]==myName) {
+    //if correct, append word to array
+    hits.push(textArray[i]);
+    };
+};
+
+//shows all hits
+if (hits.length==0) {
+    console.log("Your name wasn't found!");
+}
+else{
+    console.log(hits);
+}
